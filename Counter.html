@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+             background-color: yellow; 
+        }
+
+        .count {
+            width: 30%;
+            height: 40%;
+            position: absolute;
+            text-align: center;
+            text-shadow: 2px 10px 5px grey;
+            padding: 0px 50px 50px 50px;
+            display: inline-block;
+            border: 6px solid black;
+            top: 200px;
+            left: 400px;
+            /* animation: sample 3s infinite alternate backwards */
+        }
+
+        #value {
+            display: inline-block;
+            position: relative;
+            width: 15vw;
+            height: 5vw;
+            font-size: 4vw;
+            overflow: auto;
+      
+            border: 7px solid black;
+        }
+
+        #button1 {
+            position: absolute;
+            bottom: 14px;
+            background-color: rgb(49, 15, 241);
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+        #button2 {
+            background-color: rgb(83, 13, 245);
+            position: absolute;
+            bottom: 15px;
+            right: 40px;
+            padding: 10px;
+            border-radius: 10px;
+
+
+        }
+
+        button {
+            background: fixed;
+            font-size: large;
+            animation: sample 3s infinite alternate;
+        }
+
+        @keyframes sample {
+            0% {
+                color: rgb(10, 26, 243);
+
+            }
+
+            50% {
+                border: 5px solid rgb(68, 50, 230);
+                background-color: rgb(238, 9, 40);
+                text-decoration: underline;
+                font-size: larger;
+            }
+
+            100% {
+                transform: translateZ(222px);
+                /* border-radius: 100%; */
+
+                background-color: rgb(26, 11, 233);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="count">
+        <h1>Javascript Counter</h1>
+        <div id="value"></div>
+        <div id="button1">
+            <button id="bt">Increase Value</button>
+        </div>
+        <div id="button2">
+            <button>Decrease Value</button>
+        </div>
+
+    </div>
+    <script>
+        var inc = 0;
+       var b= document.getElementById('button1').addEventListener('click', myfunc);
+        function myfunc() {
+            var Decrease=document.getElementById('value').innerHTML=inc+=1
+        }
+     document.getElementById('button2').addEventListener('click',my);
+        function my(){
+            var Decrease=document.getElementById('value').innerHTML=inc-=1
+        }
+
+
+    </script>
+</body>
+
+</html>
